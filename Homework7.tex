@@ -1,0 +1,206 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\title{5 10-24 McCormick Ryan}
+\date{October 24, 2016}
+\author{Ryan McCormick}
+
+\maketitle
+
+\theoremstyle{plain}
+\newtheorem*{prop8.19}{Proposition 8.19}
+\begin{prop8.19}
+	\item[($\textbf{i}$)] $\forall m \in \R$, $-(-m)=m$.
+	\item[($\textbf{ii}$)] $-0 = 0$.
+\end{prop8.19}
+
+\begin{proof}
+	\item[($\textbf{i}$)] As shown in class, $-m=(-1)m$. \\
+	Therefore $(-(-m)) = (-1)(-m)$. \\
+	So we need to show that $(-1)(-m)=m$. \\
+	Adding $-m$ to both sides, \\
+	$(-1)(-m)+(-m)=m+(-m)$ \\
+	For the right side, \\
+	$m+(-m)=0$ (AXIOM 8.4) \\
+	For the left side, \\
+	$(-1)(-m)+(-m)=(-m)(-1 + 1)$ (AXIOM 8.1(iii)) \\
+	$(-1 + 1) = (1 + -1) = 0$ (AXIOM 8.1(i) and Axiom 8.4) \\
+	So now we have, \\
+	$(-m)(-1 + 1) = (-m)(0) = 0$ (PROP 8.15) \\
+	Which leaves us with both sides equaling 0, \\
+	$0 = 0$, so both sides of the equation are equal to each other. $\checkmark$
+	
+	\item[($\textbf{ii}$)] As shown in class, $-m=(-1)m$. \\
+	Therefore, $-0 = (-1)0$ and since $-1$ is the additive inverse of $1$, $-1 \in \R$ so $(-1)0 = 0$ by Prop 8.15, so $-0=0$.
+\end{proof}
+
+\newtheorem*{prop8.20}{Proposition 8.20}
+\begin{prop8.20}
+	Given $m,n \in \R$ there exists one and only one $x \in \R$ such that $m+x=n$.
+\end{prop8.20}
+
+\begin{proof}
+	If $m=n$, then $x=0$ by Axiom 8.2, and $0$ is unique by Proposition 8.11. \\
+	If $m \neq n$, then let there be two equations, $m+x_1 = n$ and $m+x_2 = n$. \\
+	For the first equation, $x_1 = n + (-m)$ by adding $(-m)$ to both sides, and simplifying the equation using Axiom 8.1(i), Axiom 8.4, and Axiom 8.2. \\
+	The same thing applies for the second equation, leaving us with $x_2 = n + (-m)$, therefore $x_1 = x_2$, so there only exists one $x \in \R$ that satisfies this equation for a given $m,n \in \R$.
+\end{proof}
+
+\newtheorem*{prop8.25}{Project 8.25}
+\begin{prop8.25}
+	Think about why division by 0 ought not to be defined. Come up with an argument that will convince a friend.
+\end{prop8.25}
+
+\begin{proof}
+	Division is defined as $y/x$ or $y \cdot x^{-1}$.\\
+	For a number divided by 0, $x=0$. \\
+	However, in Axiom 8.5 which defines multiplicative inverses, $0$ is not defined to have a multiplicative inverse. Therefore it follows that division by 0 is not defined because you would be multiplying a number by the multiplicative inverse of 0, which is not defined.
+\end{proof}
+
+\newtheorem*{prop8.40}{Proposition 8.40}
+\begin{prop8.40}
+	\item[($\textbf{i}$)] $x \in R_{>0} \iff 1/x \in \R_{>0}$.
+\end{prop8.40}
+
+\begin{proof}
+	($=>$)\\
+	Since $x \in \R_{>0}, x\in \R$, so $x^{-1} \in \R$ by Axiom 8.5. \\
+	Also, $x \cdot x^{-1} = 1$ by Axiom 8.5 and $1 \in \R_{>0}$ by Prop 8.28. \\
+	Therefore since $x \in \R_{>0}, x^{-1} \in \R$, and $1 \in \R_{>0}$,then $x^{-1} \in \R_{>0}$ by Proposition 8.36. \\\\
+	($<=$) \\
+	$(1/x)^{-1} = x$ because $(1/x)\cdot(1/x)^{-1} = 1 = (1/x)\cdot x$. (Axiom 8.5)\\
+	Since $1/x \in \R_{>0}, 1/x\in \R$, so $(1/x)^{-1} = x \in \R$ by Axiom 8.5. \\
+	Also, $x^{-1}\cdot x = x \cdot x^{-1} = 1$ by Axiom 8.5 and $1 \in \R_{>0}$ by Prop 8.28. \\
+	Therefore since $1/x \in \R_{>0}, (x) \in \R$, and $1 \in \R_{>0}$, then $x \in \R_{>0}$ by Proposition 8.36.
+\end{proof}
+
+\newtheorem*{prop8.41}{Proposition 8.41}
+\begin{prop8.41}
+	$x^2 < x^3 \iff x > 1$
+\end{prop8.41}
+
+\begin{proof}
+	($=>$)\\
+	$x^2<x^3$ \\
+	$x \cdot x < x \cdot x \cdot x$ \\
+	Multiplying by $x^{-1}$ on both sides, \\
+	$x \cdot x \cdot x^{-1} < x \cdot x \cdot x \cdot x^{-1}$ \\
+	$x \cdot 1 < x \cdot x \cdot 1$ (AXIOM 8.5)\\
+	$x < x \cdot x$ (AXIOM 8.3) \\
+	Multiplying by $x^{-1}$ on both sides again, \\
+	$x \cdot x^{-1} < x \cdot x \cdot x^{-1}$ (AXIOM 8.3) \\
+	$1 < x \cdot 1$ (AXIOM 8.5) \\
+	$1 < x$ (AXIOM 8.3)\\
+	$x > 1$ $\checkmark$ \\\\
+	
+	($<=$)\\
+	$x>1 \implies 1<x$ \\
+	Multiplying by $x^2$ on both sides, \\
+	$1 \cdot x^2 < x \cdot x^2$ \\
+	$x^2 < x^3$ (AXIOM 8.3)
+\end{proof}
+
+\newtheorem*{prop8.43}{Proposition 8.43}
+\begin{prop8.43}
+	Let $x,y \in \R$ such that $x < y$. There exists $z \in \R$ such that $x < z < y$.
+\end{prop8.43}
+
+\begin{proof}
+	Assume for contradiction that $m = min(\R)$. Then $m-1 \in \R$, but $m-1 < m$ because $m-(m-1) = 1 \in \R_{>0}$. Therefore $\R$ has no minimum element. \\
+	So for $x,y,z \in \R$, there exists a $z < y$ let's say $z=y-1$ for example since there is no minimum element. Similarly, there exists an $x < z$, let's say $x = z-1 = y-1-1$ for example for the same reason that there is always an real number smaller than another real number. \\
+	The same thing could've been done in the opposite direction, showing that $\R$ has no maximum element, and that there exists a $z>x$ and a $y>z$ such that $x<z<y$ in the real numbers due to it's properties.
+\end{proof}
+
+\newtheorem*{prop8.49}{Proposition 8.49}
+\begin{prop8.49}
+	Let $A \subset \R$ be nonempty. If $\sup(A) \in A$ then $\sup(A)$ is the largest element of A, $\sup(A) = \max(A)$. Conversely, if A has a largest element then $\max(A) = \sup(A)$ and $\sup(A) \in A$.
+\end{prop8.49}
+
+\begin{proof}
+	$b = \sup(A) \in A \implies b \in A$ and \\
+	$\sup(A)$ is an upperbound for $A \implies b$ satisfies $a\in A \implies a \le b$ \\
+	so $b = \max(A) = \sup(A)$.
+	
+	Conversely, if $b=\max(A)$ then $a\in A \implies a \le b$ by definition of a maximum. \\
+	Also if $b'$ is an upperbound for A, $b \le b'$, because $b=\max(A) \implies b\in A$ and $b \le b'$ by definition of an upperbound. Therefore $\max(A) = \sup(A)$ and $sup(A) \in A$.
+\end{proof}
+
+\newtheorem*{prop8.50}{Proposition 8.50}
+\begin{prop8.50}
+	Suppose $A \subset B \subset \R$, A and B are bounded above. Then $\sup(A) \le \sup(B)$.
+\end{prop8.50}
+
+\begin{proof}
+	$\sup(A)$ is a number $b$ such that $a \le b$ for all $a \in A$, and if $b'$ is an upper bound for A, then $b \le b'$.
+	
+	$A \subset B \implies$ every $a \in A$ is an element of B. \\
+	$\sup(B)$ is an upper bound for $B \implies$ every element $c \in B$ follows $c \le \sup(B)$. \\
+	So $\sup(B)$ is an upperbound for $A$ because every element of A is an element of B. \\
+	Also, $\sup(A)$ is the least upper bound for A, so $\sup(A) \le \sup(B)$ by the definition of supremum.
+\end{proof}
+
+\newtheorem*{prop8.51}{Project 8.51}
+\begin{prop8.51}
+	For a nonempty set $B \subset \R$, one can define the greatest lower bound, $\inf(B)$ of B. Give the precise definition for $\inf(B)$ and prove that it is unique if it exists. Also define $\min(B)$ and prove the analogue of Proposition 8.49 for greatest lower bounds and minima.
+\end{prop8.51}
+
+\begin{proof}
+	B is bounded below if there exists $a \in \R$ such that $b\in B \implies b \ge a$. \\
+	The $\inf(B)$ for B is a lower bound $c$ such that if $c'$ is a lower bound, $c \ge c'$. \\
+	If $\inf(B)$ exists, let $x_1$ and $x_2$ be greatest lower bounds for B. \\
+	$x_1$ is a lower bound and $x_2$ is a greatest lower bound $\implies x_2 \ge x_1$. \\
+	$x_2$ is a lower bound and $x_1$ is a greatest lower bound $\implies x_1 \ge x_2$. \\
+	Therefore, $x_1 \le x_2 \le x_1$ \\
+	So $x_1 = x_2$ by Proposition 8.31 so the greatest lower bound, or $\inf(B)$ is unique if it exists. \\
+	
+	$\min(B)$: An element $a \in B$ is the minimum/smallest element ($\min(B)$) of B if for all $b\in B$, $b \in B \implies a \le b$. \\
+	
+	Analogue to Proposition 8.49: \\
+	$a = \inf(B) \in B \implies a \in B$. \\
+	$\inf(B)$ is a lowerbound for B $\implies a$ satisfies $b \in B \implies a \le b$. \\
+	So $a = \min(B)$. \\
+	
+	Conversely, assuming there exists $a = \min(B) \in R$. \\
+	$b\in B \implies a \le b$ by definition of a minimum. \\
+	$a = \min(B) \implies a \in B \implies a \ge a'$ for a lower bound $a'$, by definition of a lower bound. Therefore, $a = \inf(B) \in B$. So, $\min(B) = \inf(B) \in B$.
+\end{proof}
+
+\newtheorem*{prop8.53}{Proposition 8.53}
+\begin{prop8.53}
+	Every nonempty subset of $\R$ that is bounded below has a greatest lower bound.
+\end{prop8.53}
+
+\begin{proof} %s=x, t=y u=m, m=z 
+	Let X be every nonempty subset of $\R$ that is bounded below and has a greatest lower bound. \\
+	Let Y be the set {y = -x : $x \in X$}. Since X is bounded below, there exists a lower bound $z$ such that $z \le x$ for all $x \in X$. Therefore since $z \le x$, by subtracting x from both sides and subtracting z from both sides, we get $-x \le -z$. \\
+	So $y \le -z$ for all $y \in Y$. So Y is bounded above by $-z$, so by Axiom 8.52, $\sup(Y)$ exists. \\
+	Let $m = \sup(Y)$. Then we need to show that $-m = \inf(X)$. \\
+	
+	$-m \le x, \forall x \in X$ by Axiom 8.52 \\
+	$y \le x, \forall x \in X \implies y \le -m$. \\
+	
+	Since $m$ is the least upper bound of Y, \\
+	$-x \le m, \forall x \in X$ and \\
+	$-x \le -y, \forall x \in X \implies m \le -y$. \\
+	So $-x \le -y, \forall x \in X \implies m \le -y$. \\
+	Therefore, $y \le x, \forall x \in X \implies y \le -m$. \\
+	So $-m = \inf(X)$.
+\end{proof}
+
+\end{document}
